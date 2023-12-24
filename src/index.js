@@ -1,17 +1,98 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Component } from "react";
+import ReactDOM from "react-dom/client";
+import {AppIndex,BppIndex,CppIndex,DppIndex,EppIndex,FppIndex} from "./app";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//event should be in camel case.
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function showMsg()
+{
+  console.log("showMsg() called!!!");
+}
+
+// const element = (<button type="button" onClick={showMsg}>Show Msg</button>);
+// const aroot = ReactDOM.createRoot(document.getElementById("root"));
+// aroot.render(element);
+
+
+
+// function AIndex()
+// {
+//   return(
+//     //showMsg() automatically execute the function without click
+//     // <button type="button" onClick={showMsg()}>Show Message</button>
+
+//     <button type="button" onClick={showMsg}>Show Message</button>
+
+//   )
+// }
+
+// const broot = ReactDOM.createRoot(document.getElementById("root"));
+// broot.render(<AIndex/>);
+
+
+
+//Note:- In class based component function should be inside class
+// class BIndex extends Component
+// {
+//   displayMessage()
+//   {
+//     console.log("Display Message!!");
+//   }
+
+//   render()
+//   {
+//     return(<>
+    
+//     <button type="button" onClick={this.displayMessage} >Show Message</button>
+    
+//     </>)
+//   }
+
+// }
+
+// const croot = ReactDOM.createRoot(document.getElementById("root"));
+// croot.render(<BIndex/>);
+
+
+class BIndex extends Component
+{
+  render()
+  {
+    return(<>
+    
+    {/* <AppIndex/>  */}
+
+    {/* <BppIndex/> */}
+
+    {/* <CppIndex/> */}
+
+    {/* <DppIndex /> */}
+
+    {/* <EppIndex name="Raman"/> */}
+    
+    <FppIndex/>
+
+    </>)
+  }
+
+}
+
+const croot = ReactDOM.createRoot(document.getElementById("root"));
+croot.render(<BIndex/>);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
